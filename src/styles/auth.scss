@@ -41,6 +41,11 @@
     > img {
       align-self: center;
     }
+    h2 {
+      font-size: 14px;
+      margin: 64px 0 24px;
+      font-family: "Poppings", sans-serif;
+    }
     form {
       input {
         height: 50px;
@@ -57,6 +62,13 @@
         width: 100%;
       }
     }
+    p {
+      font-size: 14px;
+      color: var(--gray-light);
+      a {
+        color: var(--pink);
+      }
+    }
   }
   .create-room {
     margin-top: 64px;
@@ -64,16 +76,17 @@
     border-radius: 8px;
     font-weight: 500;
     background: #ea4335;
-    color:var(--white);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border:0;
-    img{
+    border: 0;
+    transition: filter 0.2s;
+    img {
       margin-right: 8px;
     }
-    &:hover{
+    &:hover {
       filter: brightness(0.9);
     }
   }
