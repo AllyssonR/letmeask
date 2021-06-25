@@ -3,15 +3,19 @@ import logoImg from "../assets/images/logo.svg";
 import googleIconImg from "../assets/images/google-icon.svg";
 import { Button } from "../components/Button";
 import { useHistory } from "react-router-dom";
-
 import "../styles/auth.scss";
-import { auth, firebase } from "../services/firebase";
+import { useContext } from "react";
+import { AuthContext } from "../App";
 
 //webpack (snowpack,vite,...)
 export function Home() {
   const history = useHistory();
+  const { signInWithGoogle, user } = useContext(AuthContext);
 
-  function handleCreateRoom() {
+  async function handleCreateRoom() {
+    if (!user) {
+      await signInWithGoogle();
+    }
     history.push("/rooms/new");
   }
   return (
