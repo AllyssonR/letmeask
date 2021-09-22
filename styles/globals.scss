@@ -1,0 +1,21 @@
+:root {
+  --black: #29292e;
+  --white: #f8f8f8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 16px 'Roboto', sans-serif;
+}
